@@ -3,7 +3,6 @@
 // adding, changing or removing any of them.
 // Execute `rustlings hint move_semantics5` or use the `hint` watch subcommand for a hint.
 
-
 fn main() {
     let mut x = 100;
     let y = &mut x;

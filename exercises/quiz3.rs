@@ -14,7 +14,6 @@
 
 // Execute `rustlings hint quiz3` or use the `hint` watch subcommand for a hint.
 
-
 use std::fmt::Display;
 
 pub struct ReportCard<T> {
@@ -25,8 +24,10 @@ pub struct ReportCard<T> {
 
 impl<T: Display> ReportCard<T> {
     pub fn print(&self) -> String {
-        format!("{} ({}) - achieved a grade of {}",
-            &self.student_name, &self.student_age, &self.grade)
+        format!(
+            "{} ({}) - achieved a grade of {}",
+            &self.student_name, &self.student_age, &self.grade
+        )
     }
 }
 

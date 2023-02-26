@@ -1,13 +1,12 @@
 // enums1.rs
 // No hints this time! ;)
 
-
 #[derive(Debug)]
 enum Message {
     Quit,
     Echo,
     Move,
-    ChangeColor
+    ChangeColor,
 }
 
 fn main() {

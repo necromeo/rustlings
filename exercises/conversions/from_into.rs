@@ -35,16 +35,15 @@ impl Default for Person {
 // If while parsing the age, something goes wrong, then return the default of Person
 // Otherwise, then return an instantiated Person object with the results
 
-
 impl From<&str> for Person {
     fn from(s: &str) -> Person {
         if s == "" {
             Person::default()
         } else {
             s.split(",")
-            .map(|x| x.into())
-            .collect::<Vec<String>>()
-            .into()
+                .map(|x| x.into())
+                .collect::<Vec<String>>()
+                .into()
         }
     }
 }
@@ -53,7 +52,7 @@ impl From<Vec<String>> for Person {
     fn from(s: Vec<String>) -> Person {
         if s.len() != 2 {
             return Person::default();
-        } 
+        }
 
         let number = s[1].parse();
         let age;
@@ -64,7 +63,7 @@ impl From<Vec<String>> for Person {
             age = number.unwrap();
             Person {
                 name: s[0].clone(),
-                age
+                age,
             }
         }
     }
